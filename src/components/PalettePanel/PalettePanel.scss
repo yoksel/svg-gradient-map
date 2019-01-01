@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+.PalettePanel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: .5rem;
+  background: #FFF;
+  border: 1px solid $color-lightgray;
+  border-radius: $border-radius;
+  box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+  pointer-events: none;
+  color: $color-darkgray;
+  user-select: none;
+
+  &::after {
+    content: "";
+    // position: absolute;
+    // right: .5rem;
+    width: 6px;
+    margin-left: 1rem;
+    background: radial-gradient(
+      circle at center,
+      $color-lightgray 2px,
+      transparent 3px
+    );
+    background-position: right;
+    background-size: 6px 8px;
+    background-repeat: repeat-y;
+    align-self: stretch;
+  }
+}
+
+.PalettePanel__label {
+  display: flex;
+  pointer-events: all;
+  flex-grow: 1;
+}
+
+.PalettePanel__inputText {
+  flex-grow: 1;
+}

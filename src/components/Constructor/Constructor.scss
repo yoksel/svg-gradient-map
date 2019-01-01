@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.Constructor {
+  min-width: 350px;
+  margin-bottom: 1rem;
+  color: $color-lightgray;
+}
+
+.Constructor__container {
+  min-height: 80px;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Constructor__item {
+  width: 100%;
+}

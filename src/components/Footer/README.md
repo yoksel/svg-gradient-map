@@ -1,0 +1,7 @@
+# Footer
+
+Page footer
+
+```
+<Footer/>
+```

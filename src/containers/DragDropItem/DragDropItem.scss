@@ -1,0 +1,34 @@
+@import "../../variables.scss";
+
+.DragDropItem {
+  margin-top: 10px;
+  pointer-events: all;
+  user-select: none;
+
+  .Constructor__item:first-child > & {
+    margin-top: 0;
+  }
+}
+
+.DragDropItem__container {
+  pointer-events: none;
+}
+
+.DragDropItem--dragging {
+  & > .DragDropItem__container {
+    position: absolute;
+    z-index: 10;
+    border-radius: $border-radius;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    pointer-events: all;
+    cursor: move;
+  }
+}
+
+.DragDropItem--status-notOVerlapTarget {
+  margin-bottom: 0;
+
+  .Placeholder {
+    display: none;
+  }
+}

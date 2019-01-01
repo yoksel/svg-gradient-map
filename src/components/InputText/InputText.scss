@@ -1,0 +1,18 @@
+.InputText {
+  margin-left: 2px;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1;
+
+  &--number {
+    width: 3rem;
+    text-align: right;
+  }
+
+  &:disabled {
+    opacity: .5;
+    filter: grayscale(.5);
+  }
+}

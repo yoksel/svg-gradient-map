@@ -1,0 +1,17 @@
+{
+  "name": "feMerge",
+  "inputsData": {
+    "x": {
+      "type": "text"
+    },
+    "y": {
+      "type": "text"
+    },
+    "width": {
+      "type": "text"
+    },
+    "height": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.PrimitivePanelControls {
+  width: 28px;
+  margin-left: .5rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: yellowgreen;
+  pointer-events: all;
+
+  &--no-children {
+    width: 56px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &--no-result {
+    width: 78px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self: center;
+  }
+
+  &--parentHasSingleChild {
+    width: 28px;
+    align-self: flex-start;
+  }
+}
+
+.PrimitivePanelControl {
+  height: 20px;
+  margin: 4px;
+  padding: 0;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  line-height: 1;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  width: 20px;
+  box-shadow: 0 0 0 2px transparent;
+  transition: box-shadow .25s;
+
+  .icon {
+    margin: 0 auto;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 1px #CCC;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px;
+  }
+
+  &--remove {
+    color: crimson;
+  }
+
+  &--toggle {
+    color: #555;
+  }
+
+  &--docs {
+    color: lightseagreen;
+
+    .icon {
+      width: 12px;
+    }
+  }
+}

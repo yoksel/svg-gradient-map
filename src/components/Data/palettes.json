@@ -1,0 +1,96 @@
+[
+  {
+    "id": "pink-teal",
+    "name": "Teal & white",
+    "colors": [
+      "#08917c",
+      "#FFFFFF"
+    ]
+  },
+  {
+    "id": "pink-teal-4",
+    "name": "Teal & white",
+    "colors": [
+      "#08917c",
+      "#cdff87"
+    ]
+  },
+  {
+    "id": "pink-teal-2",
+    "name": "Teal & white",
+    "colors": [
+      "#008080",
+      "#61cc8e",
+      "#FFFFFF"
+    ]
+  },
+  {
+    "id": "sea",
+    "name": "Sea",
+    "colors": [
+      "#040543",
+      "#217785",
+      "#cbf77b"
+    ]
+  },
+  {
+    "id": "cherry-icecream",
+    "name": "Cherry icecream",
+    "colors": [
+      "#d70e5f",
+      "#ffef9c"
+    ]
+  },
+  {
+    "id": "blackCurrant-with-mint",
+    "name": "Black currant with mint",
+    "colors": [
+      "#bf41a2",
+      "#88f7c4"
+    ]
+  },
+  {
+    "id": "mix",
+    "name": "mix",
+    "colors": [
+      "#4b1f5f",
+      "#038496",
+      "#f7ef79"
+    ]
+  },
+  {
+    "id": "mix2",
+    "name": "mix2",
+    "colors": [
+      "#850082",
+      "#dc143c",
+      "#f7cf0d"
+    ]
+  },
+  {
+    "id": "sepia",
+    "name": "sepia",
+    "colors": [
+      "#42301c",
+      "#f3c797"
+    ]
+  },
+  {
+    "id": "purple-sepia",
+    "name": "Purple sepia",
+    "colors": [
+      "#020104",
+      "#850c4b",
+      "#f7cf9c"
+    ]
+  },
+  {
+    "id": "blue-sepia",
+    "name": "Blue sepia",
+    "colors": [
+      "#020104",
+      "#256485",
+      "#f7eeba"
+    ]
+  }
+]

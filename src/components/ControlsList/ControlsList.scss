@@ -1,0 +1,58 @@
+@import "../../variables.scss";
+
+.ControlsList {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &--circles {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.Control {
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  padding: 4px 20px;
+  background: #FFF;
+  border: 1px solid;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font: inherit;
+  color: $color-darkgray;
+  cursor: pointer;
+
+  &-playground {
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 0 3px;
+    }
+  }
+
+  &--circles {
+    width: 60px;
+    height: 60px;
+    margin-left: calc((100% - 180px) / 2);
+    padding: 0;
+    background-origin: border-box;
+    border-radius: 50%;
+    font-size: 0;
+    color: rgba(0, 0, 0, .5);
+
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $color-darkgray;
+    }
+  }
+}
+
+.Control__text {
+  position: relative;
+}
