@@ -4,8 +4,8 @@ import {NavLink} from 'react-router-dom';
 
 import DragDrop from '../../containers/DragDrop';
 import DragDropItem from '../../containers/DragDropItem';
-import PalettePanel from '../../containers/PalettePanel';
-import GrayscaleSwitcher from '../../containers/GrayscaleSwitcher';
+import PalettePanel from '../PalettePanel/container';
+import GrayscaleSwitcher from '../GrayscaleSwitcher/container';
 import ConstructorPlaceholder from '../ConstructorPlaceholder';
 
 import './Constructor.css';

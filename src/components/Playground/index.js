@@ -2,7 +2,7 @@ import React from 'react';
 import './Playground.css';
 import PropTypes from 'prop-types';
 
-import Filter from '../../containers/Filter';
+import Filter from '../Filter/FilterContainer';
 import ImageUploader from '../ImageUploader/ImageUploaderContainer';
 
 import './gray-cells.png';

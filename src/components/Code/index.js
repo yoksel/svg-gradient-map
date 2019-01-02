@@ -5,7 +5,7 @@ import deepClone from '../../helpers/deepClone';
 
 import {primitivesAttrs} from '../Data';
 
-import ColorInterpolFiltersSwitcher from '../../containers/ColorInterpolFiltersSwitcher';
+import ColorInterpolFiltersSwitcher from '../ColorInterpolFiltersSwitcher';
 
 import './Code.css';
 

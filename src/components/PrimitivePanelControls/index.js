@@ -34,25 +34,6 @@ const PrimitivePanelControls = ({
     panelClassList.push('PrimitivePanelControls--parentHasSingleChild');
   }
 
-  const getDocsButton = () => {
-    if (!showDocs) {
-      return null;
-    }
-
-    return (
-      <button
-        className="PrimitivePanelControl PrimitivePanelControl--docs"
-        type="button"
-        onClick={toggleDocs}
-      >
-        <Icon
-          symbol="doc"
-          color="currentColor"
-          size="15"/>
-      </button>
-    );
-  };
-
   if (parentHasSingleChild) {
     return (
       <div className={panelClassList.join(' ')}>
@@ -61,29 +42,12 @@ const PrimitivePanelControls = ({
           parentId={parentId}
           primitiveDisabled={primitiveDisabled}
         />
-        {getDocsButton()}
-      </div>
-    );
-  }
-
-  // Hide toggle, duplicate, delete controls in docs
-  if (section === 'docs') {
-    return null;
-  }
-
-  // Hide toggle, duplicate, delete controls for componentTransfer
-  if (noChangesForChildren) {
-    return (
-      <div className={panelClassList.join(' ')}>
-        {getDocsButton()}
       </div>
     );
   }
 
   return (
     <div className={panelClassList.join(' ')}>
-      {getDocsButton()}
-
       <button
         className="PrimitivePanelControl PrimitivePanelControl--toggle"
         onClick={togglePrimitive}

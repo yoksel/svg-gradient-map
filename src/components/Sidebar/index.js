@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react';
 
-import ColorsPairsList from '../../containers/ColorsPairsList';
+import PalettesList from '../PalettesList/container';
 
 const Sidebar = ({match}) => {
 
   return (
     <Fragment>
-      <ColorsPairsList type="circles"/>
+      <PalettesList type="circles"/>
     </Fragment>
     );
 };

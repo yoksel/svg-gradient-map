@@ -19,9 +19,11 @@ const mapDispatchProps = (dispatch) => {
   };
 };
 
-const ColorsPairsList = connect(
+const PalettesList
+ = connect(
   mapStateToProps,
   mapDispatchProps
 )(ControlsListTemplate);
 
-export default ColorsPairsList;
+export default PalettesList
+;

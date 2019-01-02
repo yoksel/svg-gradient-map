@@ -1,3 +1,0 @@
-# ImageUploader
-
-## Props
