@@ -1,10 +1,11 @@
-const initialState = {
+export const initialState = {
   svgCode: '',
   image: {
     src: 'https://placekitten.com/800/600',
     width: 800,
     height: 600
   },
+  sizeMb: 0,
   type: 'image-and-text'
 };
 
