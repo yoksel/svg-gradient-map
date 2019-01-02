@@ -4,6 +4,7 @@ import throttle from 'lodash/throttle';
 import deepClone from '../../helpers/deepClone';
 
 import reducers from '../../store/reducers';
+import {initialState as playgroundInitState} from '../../store/reducers/playground';
 import {palettes, primitivesData, presetsData} from '../Data';
 import {saveState, getState} from './localStorage';
 
@@ -55,10 +56,16 @@ const configureStore = () => {
     () => {
       const playgroundToSave = deepClone(store.getState().playground);
       const primitivesToSave = deepClone(store.getState().primitives);
+
+      // Prevent breaking app with too large image in storage
+      if (playgroundToSave.image && playgroundToSave.image.sizeMb >= 5) {
+        playgroundToSave.image = playgroundInitState.image;
+      }
+
       const primitivesCleared = {
         ...primitivesToSave,
         playground: primitivesToSave.playground,
-        palette: primitivesToSave.palette,
+        palette: primitivesToSave.palette
       };
 
       saveState({

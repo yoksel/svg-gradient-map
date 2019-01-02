@@ -13,18 +13,20 @@ class ImageUploader extends Component {
           className="ImageUploader__input"
 
           onChange={(e) => {
-            const files = e.target.files;
+            const file = e.target.files[0];
             var img = document.createElement("img");
-            img.src = window.URL.createObjectURL(files[0]);
+            img.src = window.URL.createObjectURL(file);
+            const sizeMb = file.size/(1000 * 1000);
 
             var reader = new FileReader();
-            reader.readAsDataURL(files[0]);
+            reader.readAsDataURL(file);
 
             reader.onloadend = function() {
               updateImage({
                 src: reader.result,
                 width: img.width,
-                height: img.height
+                height: img.height,
+                sizeMb
               })
             }
         }}/>
