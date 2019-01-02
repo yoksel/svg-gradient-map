@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from '../Icon';
-import PrimitivePanelSwitcher from '../PrimitivePanelSwitcher';
 
 import './PrimitivePanelControls.css';
 
@@ -32,18 +31,6 @@ const PrimitivePanelControls = ({
   }
   if (parentHasSingleChild) {
     panelClassList.push('PrimitivePanelControls--parentHasSingleChild');
-  }
-
-  if (parentHasSingleChild) {
-    return (
-      <div className={panelClassList.join(' ')}>
-        <PrimitivePanelSwitcher
-          id={id}
-          parentId={parentId}
-          primitiveDisabled={primitiveDisabled}
-        />
-      </div>
-    );
   }
 
   return (

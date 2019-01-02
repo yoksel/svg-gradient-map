@@ -3,7 +3,7 @@ import {withRouter} from 'react-router';
 
 import {deletePaletteColor, duplicatePaletteColor, togglePaletteColor} from '../../store/actions';
 
-import PalettePanelControlsTemplate from '../../components/PrimitivePanelControls';
+import PalettePanelControlsTemplate from '../PrimitivePanelControls';
 
 const mapDispatchProps = (
   dispatch,

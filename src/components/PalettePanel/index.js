@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import PalettePanelControls from '../../containers/PalettePanelControls';
+import PalettePanelControls from '../PalettePanelControls/container';
 import InputText from '../InputText';
 
 import './PalettePanel.css';

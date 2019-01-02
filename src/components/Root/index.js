@@ -2,7 +2,7 @@ import React from 'react';
 import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
-import App from '../../containers/App';
+import App from '../App/container';
 import SinglePage from '../SinglePage';
 import configureStore from './configureStore';
 

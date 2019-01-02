@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router';
 
-import PrimitivePanelControls from '../../containers/PrimitivePanelControls';
-import Docs from '../../containers/Docs';
+import PrimitivePanelControls from '../PrimitivePanelControls/container';
 
 import {primitivesAttrs} from '../Data';
 

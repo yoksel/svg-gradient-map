@@ -3,7 +3,7 @@ import './Playground.css';
 import PropTypes from 'prop-types';
 
 import Filter from '../Filter/FilterContainer';
-import ImageUploader from '../ImageUploader/ImageUploaderContainer';
+import ImageUploader from '../ImageUploader/container';
 
 import './gray-cells.png';
 

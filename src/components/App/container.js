@@ -31,22 +31,24 @@ class App extends Component {
     }
   };
 
-  componentDidMount() {
-    this.itemFromPath();
-  }
+  // componentDidMount() {
+  //   this.itemFromPath();
+  // }
 
-  componentDidUpdate(prevProps) {
-    const {id, section} = this.props;
+  // componentDidUpdate(prevProps) {
+  //   const {id, section} = this.props;
 
-    if (prevProps.id !== id) {
-      this.itemFromPath();
-    }
-    if (prevProps.section !== section) {
-      this.purgePrev(prevProps.section);
-    }
-  }
+  //   if (prevProps.id !== id) {
+  //     this.itemFromPath();
+  //   }
+  //   if (prevProps.section !== section) {
+  //     this.purgePrev(prevProps.section);
+  //   }
+  // }
 
   render() {
+    this.itemFromPath();
+
     return (
       <AppTemplate/>
     );
