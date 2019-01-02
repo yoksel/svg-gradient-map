@@ -29,6 +29,9 @@ const SinglePage = () => {
                 <a href="https://css-tricks.com/color-filters-can-turn-your-gray-skies-blue/">Color Filters Can Turn Your Gray Skies Blue</a> by Amelia Bellamy-Royds
               </li>
               <li>
+                <a href="https://css-tricks.com/using-svg-to-create-a-duotone-image-effect/">Using SVG to Create a Duotone Effect on Images</a> by Lentie Ward
+              </li>
+              <li>
                 <a href="https://alistapart.com/article/finessing-fecolormatrix">Finessing `feColorMatrix`</a> by Una Kravets
               </li>
             </ul>
