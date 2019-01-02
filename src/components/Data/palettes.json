@@ -68,6 +68,24 @@
     ]
   },
   {
+    "id": "red-sunset",
+    "name": "Red sunset",
+    "colors": [
+      "#460305",
+      "#dc143c",
+      "#f7cf0d"
+    ]
+  },
+  {
+    "id": "gold-sunset",
+    "name": "Gold sunset",
+    "colors": [
+      "#460305",
+      "#dc4e05",
+      "#fff304"
+    ]
+  },
+  {
     "id": "sepia",
     "name": "sepia",
     "colors": [
@@ -88,9 +106,36 @@
     "id": "blue-sepia",
     "name": "Blue sepia",
     "colors": [
-      "#020104",
+      "#490b51",
       "#256485",
       "#f7eeba"
+    ]
+  },
+  {
+    "id": "green-sepia",
+    "name": "Green sepia",
+    "colors": [
+      "#3f2810",
+      "#638564",
+      "#f5f7c7"
+    ]
+  },
+  {
+    "id": "x-rays",
+    "name": "X-rays",
+    "colors": [
+      "#faffe9",
+      "#4d709e",
+      "#413d64"
+    ]
+  },
+  {
+    "id": "warm-x-rays",
+    "name": "Warm X-rays",
+    "colors": [
+      "#faffe9",
+      "#be7364",
+      "#821d4b"
     ]
   }
 ]
