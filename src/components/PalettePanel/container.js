@@ -10,7 +10,7 @@ const mapDispatchProps = (
 ) => {
   return {
     onChange: (value) => {
-      const {index, match} = props;
+      const {index} = props;
       const initialProps = {
         index,
         color: value

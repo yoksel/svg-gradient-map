@@ -5,6 +5,8 @@ import DragDrop from '../../containers/DragDrop';
 import DragDropItem from '../../containers/DragDropItem';
 import PalettePanel from '../PalettePanel/container';
 import GrayscaleSwitcher from '../GrayscaleSwitcher/container';
+import OpacityControl from '../OpacityControl/container';
+import BlendModeControl from '../BlendModeControl/container';
 import ConstructorPlaceholder from '../ConstructorPlaceholder';
 
 import './Constructor.css';
@@ -74,6 +76,20 @@ const Constructor = ({
             );
           })}
         </DragDrop>
+
+        {
+          palette.length > 0 && (
+            <div
+              key="opacity"
+              id="opacity"
+              className="Constructor__options"
+              >
+                <OpacityControl parentClassName="Constructor"/>
+                <BlendModeControl parentClassName="Constructor"/>
+            </div>
+          )
+        }
+
       </div>
     </section>
   );

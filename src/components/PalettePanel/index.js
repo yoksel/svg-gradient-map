@@ -37,5 +37,9 @@ class PalettePanel extends Component {
 export default PalettePanel;
 
 PalettePanel.propTypes = {
-
+  id: PropTypes.string,
+  index: PropTypes.number,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  disabled: PropTypes.bool,
 };
