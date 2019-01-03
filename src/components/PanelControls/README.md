@@ -1,4 +1,4 @@
-# PrimitivePanelControls
+# PanelControls
 
 Controls for primitive panel:
 
@@ -11,5 +11,3 @@ Uses:
 
 * [Icon](#icon)
 * [PrimitivePanelSwitcher](#primitivepanelswitcher)
-
-__Container:__ [PrimitivePanelControls](#primitivepanelcontrols-1)

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import Icon from '../Icon';
 
-import './PrimitivePanelControls.css';
+import './PanelControls.css';
 
-const PrimitivePanelControls = ({
+const PanelControls = ({
   duplicatePrimitive,
   removePrimitive,
   togglePrimitive,
@@ -21,22 +21,21 @@ const PrimitivePanelControls = ({
   noChangesForChildren
 }) => {
   const panelClassList = [
-    'PrimitivePanelControls',
-    `PrimitivePanelControls--${hasChildrenMod}`
+    'PanelControls',
+    `PanelControls--${hasChildrenMod}`
   ];
-  let showDocs = false;
 
   if (!hasResult) {
-    panelClassList.push('PrimitivePanelControls--no-result');
+    panelClassList.push('PanelControls--no-result');
   }
   if (parentHasSingleChild) {
-    panelClassList.push('PrimitivePanelControls--parentHasSingleChild');
+    panelClassList.push('PanelControls--parentHasSingleChild');
   }
 
   return (
     <div className={panelClassList.join(' ')}>
       <button
-        className="PrimitivePanelControl PrimitivePanelControl--toggle"
+        className="PanelControl PanelControl--toggle"
         onClick={togglePrimitive}
         type="button"
       >
@@ -47,7 +46,7 @@ const PrimitivePanelControls = ({
       </button>
 
       <button
-        className="PrimitivePanelControl PrimitivePanelControl--add"
+        className="PanelControl PanelControl--add"
         onClick={duplicatePrimitive}
         type="button"
       >
@@ -58,7 +57,7 @@ const PrimitivePanelControls = ({
       </button>
 
       <button
-        className="PrimitivePanelControl PrimitivePanelControl--remove"
+        className="PanelControl PanelControl--remove"
         type="button"
         onClick={removePrimitive}
       >
@@ -72,9 +71,9 @@ const PrimitivePanelControls = ({
   );
 };
 
-export default PrimitivePanelControls;
+export default PanelControls;
 
-PrimitivePanelControls.propTypes = {
+PanelControls.propTypes = {
   duplicatePrimitive: PropTypes.func,
   removePrimitive: PropTypes.func,
   togglePrimitive: PropTypes.func,
