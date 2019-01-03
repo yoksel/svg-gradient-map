@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
 
-import DragDrop from '../../containers/DragDrop';
 import Constructor from '../Constructor/container';
 import Playground from '../Playground/container';
 import Code from '../Code/container';

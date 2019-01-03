@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {NavLink} from 'react-router-dom';
 
 import DragDrop from '../../containers/DragDrop';
 import DragDropItem from '../../containers/DragDropItem';
@@ -37,12 +36,16 @@ const Constructor = ({
 
         {palette.length > 0 && <GrayscaleSwitcher/>}
 
-        <DragDrop
-          listId="primitives_in_constructor">
+        <DragDrop>
 
           {palette.map((color, index) => {
-            const {value, disabled} = color;
-            const id = `color-${index}`;
+            const {
+              id,
+              value,
+              disabled,
+              justAdded,
+              nativeEvent
+            } = color;
             const props = {
               id,
               index,
@@ -51,6 +54,7 @@ const Constructor = ({
               value,
               disabled
             };
+
             return (
               <div
                 key={id}
@@ -61,8 +65,8 @@ const Constructor = ({
                   id={id}
                   listId="palette"
                   index={index}
-                  justAdded={color.justAdded || false}
-                  nativeEvent={color.nativeEvent || false}
+                  justAdded={justAdded}
+                  nativeEvent={nativeEvent}
                 >
                   <PalettePanel {...props}/>
                 </DragDropItem>

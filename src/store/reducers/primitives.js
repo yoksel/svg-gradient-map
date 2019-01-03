@@ -422,12 +422,14 @@ export const primitives = (state = initialState, action) => {
 
   case 'ADD_PALETTE':
     const addPaletteNewPalette = action.colors
-      .map(value => {
+      .map((value, index) => {
         return {
+          id: `color-${index}`,
           value,
           disabled: false,
           justAdded: false,
-          nativeEvent: null
+          nativeEvent: null,
+          groupName: 'color'
         }
       });
 
@@ -460,9 +462,13 @@ export const primitives = (state = initialState, action) => {
   case 'DUPLICATE_PALETTE_COLOR':
     const duplicatePaletteColorPalette = deepClone(state.palette);
 
-    const colorByIndexDuplicate = duplicatePaletteColorPalette[action.index];
+    const newDuplicatePaletteColorNewColor = updateUnicalProps({
+      state: duplicatePaletteColorPalette,
+      primitive: duplicatePaletteColorPalette[action.index],
+      section: 'playground'
+    });
 
-    duplicatePaletteColorPalette.splice(action.index, 0, colorByIndexDuplicate);
+    duplicatePaletteColorPalette.splice(action.index, 0, newDuplicatePaletteColorNewColor);
 
     return {
       ...state,

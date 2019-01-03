@@ -126,12 +126,12 @@ const mapDispatchProps = (dispatch, {match}) => {
             ...swapItemsData,
             section
           }));
-
-          dispatch({
-            type: 'UDPATE_DRAG_INDEX',
-            index: newIndex
-          });
         }
+
+        dispatch({
+          type: 'UDPATE_DRAG_INDEX',
+          index: newIndex
+        });
       }
     },
     onStopDrag: (id) => {
