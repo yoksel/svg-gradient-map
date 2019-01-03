@@ -1,6 +1,6 @@
 [
   {
-    "id": "pink-teal",
+    "id": "teal-white",
     "name": "Teal & white",
     "colors": [
       "#08917c",
@@ -8,20 +8,43 @@
     ]
   },
   {
-    "id": "pink-teal-4",
-    "name": "Teal & white",
+    "id": "teal-lightgreen",
+    "name": "Teal & lightgreen",
     "colors": [
       "#08917c",
       "#cdff87"
     ]
   },
   {
-    "id": "pink-teal-2",
-    "name": "Teal & white",
+    "id": "sepia",
+    "name": "sepia",
     "colors": [
-      "#008080",
-      "#61cc8e",
-      "#FFFFFF"
+      "#42301c",
+      "#f3c797"
+    ]
+  },
+  {
+    "id": "purple-sepia",
+    "name": "Purple sepia",
+    "colors": [
+      "#6e105e",
+      "#f7e0c9"
+    ]
+  },
+  {
+    "id": "cherry-icecream",
+    "name": "Cherry icecream",
+    "colors": [
+      "#d70e5f",
+      "#ffef9c"
+    ]
+  },
+  {
+    "id": "blackCurrant-and-mint",
+    "name": "Black currant and mint",
+    "colors": [
+      "#bf41a2",
+      "#88f7c4"
     ]
   },
   {
@@ -34,24 +57,8 @@
     ]
   },
   {
-    "id": "cherry-icecream",
-    "name": "Cherry icecream",
-    "colors": [
-      "#d70e5f",
-      "#ffef9c"
-    ]
-  },
-  {
-    "id": "blackCurrant-with-mint",
-    "name": "Black currant with mint",
-    "colors": [
-      "#bf41a2",
-      "#88f7c4"
-    ]
-  },
-  {
-    "id": "mix",
-    "name": "mix",
+    "id": "warm-sea",
+    "name": "Warm sea",
     "colors": [
       "#4b1f5f",
       "#038496",
@@ -59,8 +66,17 @@
     ]
   },
   {
-    "id": "mix2",
-    "name": "mix2",
+    "id": "spring-grass",
+    "name": "Spring grass",
+    "colors": [
+      "#008080",
+      "#61cc8e",
+      "#eaffbc"
+    ]
+  },
+  {
+    "id": "red-sunset-with-purple",
+    "name": "Red sunset with purple",
     "colors": [
       "#850082",
       "#dc143c",
@@ -86,16 +102,8 @@
     ]
   },
   {
-    "id": "sepia",
-    "name": "sepia",
-    "colors": [
-      "#42301c",
-      "#f3c797"
-    ]
-  },
-  {
-    "id": "purple-sepia",
-    "name": "Purple sepia",
+    "id": "dark-crimson-sepia",
+    "name": "Dark crimson sepia",
     "colors": [
       "#020104",
       "#850c4b",
@@ -103,8 +111,8 @@
     ]
   },
   {
-    "id": "blue-sepia",
-    "name": "Blue sepia",
+    "id": "dark-blue-sepia",
+    "name": "Dark blue sepia",
     "colors": [
       "#490b51",
       "#256485",
@@ -112,8 +120,8 @@
     ]
   },
   {
-    "id": "green-sepia",
-    "name": "Green sepia",
+    "id": "dark-green-sepia",
+    "name": "Dark green sepia",
     "colors": [
       "#3f2810",
       "#638564",
@@ -136,6 +144,15 @@
       "#faffe9",
       "#be7364",
       "#821d4b"
+    ]
+  },
+  {
+    "id": "golden-x-rays",
+    "name": "Golden X-rays",
+    "colors": [
+      "#faffe9",
+      "#fffa6d",
+      "#f07106"
     ]
   }
 ]
