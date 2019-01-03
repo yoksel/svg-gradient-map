@@ -19,14 +19,25 @@ const Constructor = ({
   section,
   palette
 }) => {
+
   const paletteStr = palette
     .filter(item => !item.disabled)
     .map(item => item.value)
     .join('');
 
+
   if(paletteStr !== prevPalette) {
     prevPalette = paletteStr;
     paletteChanged(palette);
+
+    if (process.env.NODE_ENV !== 'production') {
+        // Temporary for extracting good palettes
+        console.groupCollapsed('Palette');
+        console.log(palette
+          .filter(item => !item.disabled)
+          .map(item => item.value));
+        console.groupEnd('Palette');
+      }
   }
 
   return (
