@@ -8,7 +8,8 @@ const mapStateToProps = (state, {match}) => {
 
   return {
     primitives: state.primitives[section],
-    filterData: state.primitives.filter
+    filterData: state.primitives.filter,
+    filterId: state.primitives.filterId
   };
 };
 

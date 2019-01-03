@@ -123,7 +123,7 @@ export const addPreset = createAction(
 
 export const addPalette = createAction(
   ADD_PALETTE,
-  ['colors', 'nativeEvent']
+  ['id', 'colors', 'nativeEvent']
 );
 
 export const changePaletteColor = createAction(

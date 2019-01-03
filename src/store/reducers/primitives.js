@@ -74,6 +74,7 @@ const initialState = {
   grayscaleType: 'red',
   imageOpacity: 1,
   blendMode: 'normal',
+  filterId: '',
   filter: {
     x: '-10%',
     y: '-10%',
@@ -437,7 +438,8 @@ export const primitives = (state = initialState, action) => {
 
     return {
       ...state,
-      palette: addPaletteNewPalette
+      palette: addPaletteNewPalette,
+      filterId: action.id
     }
 
   case 'CHANGE_PALETTE_COLOR':

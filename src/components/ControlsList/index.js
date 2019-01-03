@@ -93,6 +93,7 @@ const ControlsList = ({
               };
 
               addPalette({
+                id: item.id,
                 colors: item.colors,
                 nativeEvent
               });

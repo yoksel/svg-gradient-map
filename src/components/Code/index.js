@@ -98,7 +98,7 @@ class Code extends Component {
     const filterData = this.props.filterData;
     const filterAttrs = getFilterAttrs(filterData);
 
-    const {primitives} = this.props;
+    const {primitives, filterId} = this.props;
     const primitivesCode = getAllPrimitivesCode(primitives).join('\n');
 
     if (process.env.NODE_ENV !== 'production') {
@@ -109,7 +109,7 @@ class Code extends Component {
     }
 
     const value = primitivesCode ?
-      `<filter id="filter" ${filterAttrs}>\n${primitivesCode}\n</filter>` :
+      `<filter id="${filterId}" ${filterAttrs}>\n${primitivesCode}\n</filter>` :
       '';
 
     return (
