@@ -33,7 +33,7 @@ const typesList = [
   }
 ];
 
-class PlaygroundSwitcher extends Component {
+class GrayscaleSwitcher extends Component {
   render() {
     const {
       grayscaleType = 'red',
@@ -79,9 +79,9 @@ const mapDispatchProps = (dispatch) => {
   };
 };
 
-PlaygroundSwitcher = connect(
+GrayscaleSwitcher = connect(
   mapStateToProps,
   mapDispatchProps
-)(PlaygroundSwitcher);
+)(GrayscaleSwitcher);
 
-export default PlaygroundSwitcher;
+export default GrayscaleSwitcher;

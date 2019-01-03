@@ -45,7 +45,7 @@ const mapStateToProps = (state, {match}) => {
   let {section, id} = match.params;
   let handlerName;
 
-  id = 'duotone';
+  id = 'gradientMap';
   handlerName = 'addPreset';
 
   return {

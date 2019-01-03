@@ -72,6 +72,8 @@ const initialState = {
   palette: [],
   swapSnapshot: '',
   grayscaleType: 'red',
+  imageOpacity: 1,
+  blendMode: 'normal',
   filter: {
     x: '-10%',
     y: '-10%',
@@ -448,6 +450,7 @@ export const primitives = (state = initialState, action) => {
       palette: changePaletteColorPalette
     }
 
+
   case 'TOGGLE_PALETTE_COLOR':
     const togglePaletteColorPalette = deepClone(state.palette);
     const togglePaletteDisabled = togglePaletteColorPalette[action.index].disabled;
@@ -484,6 +487,18 @@ export const primitives = (state = initialState, action) => {
       ...state,
       palette: deletePaletteColorPalette
     }
+
+  case 'SET_IMAGE_OPACITY':
+    return {
+      ...state,
+      imageOpacity: action.imageOpacity
+    };
+
+  case 'SET_BLEND_MODE':
+    return {
+      ...state,
+      blendMode: action.blendMode
+    };
 
   case 'SWAP_PRIMITIVES':
     const swapParentId = action.parentId;

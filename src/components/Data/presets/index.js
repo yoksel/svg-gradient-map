@@ -1,5 +1,5 @@
-import duotone from './duotone';
+import gradientMap from './gradientMap';
 
 export default [
-  duotone
+  gradientMap
 ];

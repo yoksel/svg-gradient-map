@@ -53,6 +53,8 @@ const CHANGE_PALETTE_COLOR = 'CHANGE_PALETTE_COLOR';
 const DELETE_PALETTE_COLOR = 'DELETE_PALETTE_COLOR';
 const DUPLICATE_PALETTE_COLOR = 'DUPLICATE_PALETTE_COLOR';
 const TOGGLE_PALETTE_COLOR = 'TOGGLE_PALETTE_COLOR';
+const SET_IMAGE_OPACITY = 'SET_IMAGE_OPACITY';
+const SET_BLEND_MODE = 'SET_BLEND_MODE';
 
 const START_DRAG = 'START_DRAG';
 const MOVE_DRAG = 'MOVE_DRAG';
@@ -142,6 +144,16 @@ export const duplicatePaletteColor = createAction(
 export const togglePaletteColor = createAction(
   TOGGLE_PALETTE_COLOR,
   ['index']
+);
+
+export const setImageOpacity = createAction(
+  SET_IMAGE_OPACITY,
+  ['imageOpacity']
+);
+
+export const setBlendMode = createAction(
+  SET_BLEND_MODE,
+  ['blendMode']
 );
 
 export const startDrag = createAction(
