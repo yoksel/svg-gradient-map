@@ -5,7 +5,13 @@
 }
 
 .SinglePage__inner {
+  max-width: 1028px;
+  margin: 0 auto;
   padding: 2.5rem $offset;
+}
+
+.SinglePage__title {
+  margin-top: 0;
 }
 
 .SinglePage__title {
