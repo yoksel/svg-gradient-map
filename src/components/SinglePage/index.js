@@ -51,7 +51,7 @@ const SinglePage = () => {
 
             <Demos
               list={filtersListBlendmodes}
-              />
+            />
 
             <p>Play with them to get many more vibrant filters for your images : )</p>
 

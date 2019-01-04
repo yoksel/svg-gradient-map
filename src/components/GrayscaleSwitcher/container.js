@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {connect} from 'react-redux';
 
-import {setGrayscaleType, changePrimitiveProp} from '../../store/actions';
+import {setGrayscaleType as setGrayscaleTypeAction, changePrimitiveProp} from '../../store/actions';
 
 import RadioList from '../../components/RadioList';
 
@@ -46,7 +46,7 @@ class GrayscaleSwitcher extends Component {
           name="Grayscale by channel"
           list={typesList}
           current={grayscaleType}
-          onChange={function(value) {
+          onChange={function (value) {
             setGrayscaleType({
               value,
               grayscaleType: this.id
@@ -66,7 +66,7 @@ const mapStateToProps = (state) => {
 const mapDispatchProps = (dispatch) => {
   return {
     setGrayscaleType: ({value, grayscaleType}) => {
-      dispatch(setGrayscaleType({
+      dispatch(setGrayscaleTypeAction({
         grayscaleType
       }));
       dispatch(changePrimitiveProp({

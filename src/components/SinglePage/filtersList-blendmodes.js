@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 const filtersList = {
   'dark-crimson-sepia-screen': {
     data: {

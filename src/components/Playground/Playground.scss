@@ -63,12 +63,12 @@
   .Playground--text & {
     font-size: 9rem;
   }
-
 }
 
 .image {
   transition: opacity .15s;
 }
+
 .image--filtered:hover {
   opacity: 0;
 }

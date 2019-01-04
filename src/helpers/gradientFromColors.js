@@ -7,6 +7,6 @@ const gradientFromColor = (colors) => {
     });
 
   return `linear-gradient(to right top, ${colorsWithStops.join(',')})`;
-}
+};
 
 export default gradientFromColor;

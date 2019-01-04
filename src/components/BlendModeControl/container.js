@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {connect} from 'react-redux';
 
-import {setBlendMode, changePrimitiveProp} from '../../store/actions';
+import {setBlendMode as setBlendModeAction, changePrimitiveProp} from '../../store/actions';
 
 import blendAttrs from '../../components/Data/primitivesAttrs/blend';
 import InputSelect from '../../components/InputSelect';
@@ -29,7 +29,7 @@ class BlendModeControl extends Component {
             value={blendMode}
             valuesList={blendAttrs.mode}
             className={inputClass}
-            onChange={function(value) {
+            onChange={function (value) {
               setBlendMode({
                 value
               });
@@ -49,7 +49,7 @@ const mapStateToProps = (state) => {
 const mapDispatchProps = (dispatch) => {
   return {
     setBlendMode: ({value}) => {
-      dispatch(setBlendMode({
+      dispatch(setBlendModeAction({
         blendMode: value
       }));
       dispatch(changePrimitiveProp({

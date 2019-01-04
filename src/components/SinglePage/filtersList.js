@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 const filtersList = {
   'sepia': {
     data: {
@@ -112,7 +114,6 @@ const filtersList = {
   <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
 </filter>`
   },
-
 
 
 };

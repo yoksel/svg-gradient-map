@@ -71,9 +71,9 @@ const Constructor = ({
               key="opacity"
               id="opacity"
               className="Constructor__options"
-              >
-                <OpacityControl parentClassName="Constructor"/>
-                <BlendModeControl parentClassName="Constructor"/>
+            >
+              <OpacityControl parentClassName="Constructor"/>
+              <BlendModeControl parentClassName="Constructor"/>
             </div>
           )
         }

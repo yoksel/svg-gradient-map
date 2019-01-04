@@ -421,7 +421,7 @@ export const primitives = (state = initialState, action) => {
     return {
       ...state,
       grayscaleType: action.grayscaleType
-    }
+    };
 
   case 'ADD_PALETTE':
     const addPaletteNewPalette = action.colors
@@ -433,14 +433,14 @@ export const primitives = (state = initialState, action) => {
           justAdded: false,
           nativeEvent: null,
           groupName: 'color'
-        }
+        };
       });
 
     return {
       ...state,
       palette: addPaletteNewPalette,
       filterId: action.id
-    }
+    };
 
   case 'CHANGE_PALETTE_COLOR':
     const changePaletteColorPalette = deepClone(state.palette);
@@ -450,7 +450,7 @@ export const primitives = (state = initialState, action) => {
     return {
       ...state,
       palette: changePaletteColorPalette
-    }
+    };
 
 
   case 'TOGGLE_PALETTE_COLOR':
@@ -462,7 +462,7 @@ export const primitives = (state = initialState, action) => {
     return {
       ...state,
       palette: togglePaletteColorPalette
-    }
+    };
 
   case 'DUPLICATE_PALETTE_COLOR':
     const duplicatePaletteColorPalette = deepClone(state.palette);
@@ -478,7 +478,7 @@ export const primitives = (state = initialState, action) => {
     return {
       ...state,
       palette: duplicatePaletteColorPalette
-    }
+    };
 
   case 'DELETE_PALETTE_COLOR':
     const deletePaletteColorPalette = deepClone(state.palette);
@@ -488,7 +488,7 @@ export const primitives = (state = initialState, action) => {
     return {
       ...state,
       palette: deletePaletteColorPalette
-    }
+    };
 
   case 'SET_IMAGE_OPACITY':
     return {

@@ -1,4 +1,4 @@
-const HEXtoRGB = (hex) => {
+const convertHEXtoRGB = (hex) => {
   const R = hex.slice(0,2);
   const G = hex.slice(2,4);
   const B = hex.slice(4,6);
@@ -8,17 +8,17 @@ const HEXtoRGB = (hex) => {
     g: parseInt(G, 16),
     b: parseInt(B, 16)
   };
-}
+};
 
 const colorsListToRGBValues = (colors) => {
   const rgbValues = colors
     .reduce((prev, item) => {
-      const rgbSet = HEXtoRGB(item.substr(1));
+      const rgbSet = convertHEXtoRGB(item.substr(1));
 
       Object.keys(rgbSet)
         .forEach(key => {
           rgbSet[key] = Math.round(rgbSet[key] / 255 * 100) / 100;
-        })
+        });
 
       prev.r.push(rgbSet.r);
       prev.g.push(rgbSet.g);
@@ -29,6 +29,6 @@ const colorsListToRGBValues = (colors) => {
     }, {r: [], g: [], b: []});
 
   return rgbValues;
-}
+};
 
 export default colorsListToRGBValues;

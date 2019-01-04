@@ -115,13 +115,12 @@ const mapDispatchProps = (dispatch, {match}) => {
       if (swapItemsData) {
         const newIndex = swapItemsData.indexes.to;
 
-        if(swapItemsData.listId === 'palette') {
+        if (swapItemsData.listId === 'palette') {
           dispatch(swapPaletteColors({
             ...swapItemsData,
             section
           }));
-        }
-        else {
+        } else {
           dispatch(swapPrimitives({
             ...swapItemsData,
             section

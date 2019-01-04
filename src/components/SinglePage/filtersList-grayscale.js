@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 const filtersList = {
   'dark-blue-sepia-R': {
     data: {

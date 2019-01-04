@@ -8,7 +8,7 @@ const Sidebar = ({match}) => {
     <Fragment>
       <PalettesList type="circles"/>
     </Fragment>
-    );
+  );
 };
 
 export default Sidebar;

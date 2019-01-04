@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import './ImageUploader.css';
@@ -14,15 +14,15 @@ class ImageUploader extends Component {
 
           onChange={(e) => {
             const file = e.target.files[0];
-            var img = document.createElement("img");
+            const img = document.createElement('img');
             img.src = window.URL.createObjectURL(file);
             const sizeMb = file.size/(1000 * 1000);
 
-            var reader = new FileReader();
+            const reader = new FileReader();
             reader.readAsDataURL(file);
 
-            reader.onloadend = function() {
-              if(img.width === 0) {
+            reader.onloadend = function () {
+              if (img.width === 0) {
                 // Image exists but has zero dimensions
                 setTimeout(() => {
                   updateImage({
@@ -30,10 +30,9 @@ class ImageUploader extends Component {
                     width: img.width,
                     height: img.height,
                     sizeMb
-                  })
+                  });
                 }, 50);
-              }
-              else {
+              } else {
                 updateImage({
                   src: reader.result,
                   width: img.width,
@@ -41,8 +40,8 @@ class ImageUploader extends Component {
                   sizeMb
                 });
               }
-            }
-        }}/>
+            };
+          }}/>
       </div>
     );
   }

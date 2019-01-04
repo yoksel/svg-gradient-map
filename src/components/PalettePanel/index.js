@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import PalettePanelControls from '../PalettePanelControls/container';
@@ -20,8 +20,8 @@ class PalettePanel extends Component {
     return (
       <div className="PalettePanel">
         <label className="PalettePanel__label">
-        <span
-          className="visuallyhidden">Color {props.index}</span>
+          <span
+            className="visuallyhidden">Color {props.index}</span>
           <InputText
             {...props}
             className="PalettePanel__inputText"

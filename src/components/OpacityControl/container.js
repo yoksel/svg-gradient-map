@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {connect} from 'react-redux';
 
-import {setImageOpacity, changePrimitiveProp} from '../../store/actions';
+import {setImageOpacity as setImageOpacityAction, changePrimitiveProp} from '../../store/actions';
 
 import InputText from '../../components/InputText';
 
@@ -31,7 +31,7 @@ class OpacityControl extends Component {
             max="1"
             step=".1"
             className={inputClass}
-            onChange={function(value) {
+            onChange={function (value) {
               setImageOpacity({
                 value
               });
@@ -51,7 +51,7 @@ const mapStateToProps = (state) => {
 const mapDispatchProps = (dispatch) => {
   return {
     setImageOpacity: ({value}) => {
-      dispatch(setImageOpacity({
+      dispatch(setImageOpacityAction({
         imageOpacity: value
       }));
       dispatch(changePrimitiveProp({

@@ -20,7 +20,7 @@
   position: relative;
   margin-left: .5rem;
   margin-bottom: .5rem;
-  background: url(nicki-eliza-schinow-356622-unsplash-300.jpg);
+  background: url("nicki-eliza-schinow-356622-unsplash-300.jpg");
   background-position: 0 0;
 }
 
@@ -47,7 +47,7 @@
   border: 1px solid;
   border-radius: 50%;
   color: $color-darkgray;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, .5) ;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, .5);
 }
 
 .Demos__svg {
@@ -56,12 +56,12 @@
   &:first-child {
     margin-left: 0;
   }
+}
 
-  image {
-    transition: opacity .15s;
-  }
+.Demos__image {
+  transition: opacity .15s;
 
-  .Demos__item:hover & image {
+  .Demos__item:hover & {
     opacity: 0;
   }
 }

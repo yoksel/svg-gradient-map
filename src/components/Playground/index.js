@@ -40,7 +40,7 @@ const Playground = ({
   const content = getSvgContentByPlaygroundType();
 
   return (
-    <section className={`Playground`}>
+    <section className={'Playground'}>
       <h2 className="visuallyhidden">Live demo</h2>
       <div className="Playground__image">
         <ImageUploader/>

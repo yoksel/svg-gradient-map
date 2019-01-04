@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 
-import {addPreset, changePrimitiveChildrenProps} from '../../store/actions';
+import {addPreset as addPresetAction, changePrimitiveChildrenProps} from '../../store/actions';
 
 import colorsListToRGBValues from '../../helpers/colorsListToRGBValues';
 
@@ -18,7 +18,7 @@ class App extends Component {
       addPreset
     } = this.props;
 
-    if(primitives.playground.length > 0 || primitives.palette.length === 0) {
+    if (primitives.playground.length > 0 || primitives.palette.length === 0) {
       return null;
     }
 
@@ -43,18 +43,18 @@ class App extends Component {
       .map(item => item.value)
       .join('');
 
-    if(paletteStr !== prevPalette) {
+    if (paletteStr !== prevPalette) {
       prevPalette = paletteStr;
       updateFilterColors(primitives.palette);
 
       if (process.env.NODE_ENV !== 'production') {
-          // Temporary for extracting good palettes
-          console.groupCollapsed('Palette');
-          console.log(palette
-            .filter(item => !item.disabled)
-            .map(item => item.value));
-          console.groupEnd('Palette');
-        }
+        // Temporary for extracting good palettes
+        console.groupCollapsed('Palette');
+        console.log(palette
+          .filter(item => !item.disabled)
+          .map(item => item.value));
+        console.groupEnd('Palette');
+      }
     }
   }
 
@@ -82,7 +82,7 @@ const mapStateToProps = (state, {match}) => {
 const mapDispatchProps = (dispatch, props) => {
   return {
     addPreset: (presets) => {
-      dispatch(addPreset(presets[0]));
+      dispatch(addPresetAction(presets[0]));
     },
     updateFilterColors: (colors) => {
       const colorsFiltered = colors
@@ -99,7 +99,7 @@ const mapDispatchProps = (dispatch, props) => {
             id,
             param: 'tableValues',
             value: rgbValues[key].join(' '),
-          }
+          };
           return prev;
         }, {});
 

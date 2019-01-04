@@ -14,6 +14,7 @@
     "declaration-no-important": true,
     "declaration-colon-space-before": "never",
     "declaration-colon-space-after": "always",
+    "declaration-colon-newline-after": null,
     "property-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,
     "number-leading-zero": "never",

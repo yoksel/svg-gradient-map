@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import gradientFromColors from '../../helpers/gradientFromColors';
@@ -18,55 +18,56 @@ class Demos extends Component {
         <ul className="Demos__list">
           {
             Object.keys(list)
-            .map(key => {
-              const {data, code} = list[key];
-              const filterUrl = `url(#${key})`;
-              const palettesById = palettes
-                .filter(item => item.id === data.palette);
-              const style = {};
-              const palette = palettesById[0];
-              let name = '';
-              const channel = data.channel ? ` + grayscale by ${data.channel}` : '';
-              const blendmode = data.blendmode ? ` + ${data.blendmode}` : '';
+              .map(key => {
+                const {data, code} = list[key];
+                const filterUrl = `url(#${key})`;
+                const palettesById = palettes
+                  .filter(item => item.id === data.palette);
+                const style = {};
+                const palette = palettesById[0];
+                let name = '';
+                const channel = data.channel ? ` + grayscale by ${data.channel}` : '';
+                const blendmode = data.blendmode ? ` + ${data.blendmode}` : '';
 
-              if(palette) {
-                const {colors} = palette;
-                name = palette.name;
+                if (palette) {
+                  const {colors} = palette;
+                  name = palette.name;
 
-                style.backgroundImage = gradientFromColors(colors);
-              }
+                  style.backgroundImage = gradientFromColors(colors);
+                }
 
-              return (
-                <li
-                  className="Demos__item"
-                  key={key}
-                >
-                  <div className="Demos__data">
-                    <span
-                      className="Demos__palette"
-                      style={style}
-                      title={name}></span>
+                return (
+                  <li
+                    className="Demos__item"
+                    key={key}
+                  >
+                    <div className="Demos__data">
+                      <span
+                        className="Demos__palette"
+                        style={style}
+                        title={name}></span>
 
-                    <div className="Demos__data-additions">
-                      {channel}
-                      {blendmode}
+                      <div className="Demos__data-additions">
+                        {channel}
+                        {blendmode}
+                      </div>
                     </div>
-                  </div>
 
-                  <svg
-                    viewBox="0 0 300 169" width="300" height="169"
-                    className="Demos__svg">
-                    <defs dangerouslySetInnerHTML={{__html: code}}></defs>
+                    <svg
+                      viewBox="0 0 300 169" width="300" height="169"
+                      className="Demos__svg">
+                      <defs dangerouslySetInnerHTML={{__html: code}}></defs>
 
-                    <image
-                      x="0%" y="0%" width="100%" height="100%"
-                      preserveAspectRatio="xMidYMid slice"
-                      xlinkHref={img}
-                      filter={filterUrl}></image>
-                  </svg>
-                </li>
-              )
-            })
+                      <image
+                        x="0%" y="0%" width="100%" height="100%"
+                        preserveAspectRatio="xMidYMid slice"
+                        xlinkHref={img}
+                        filter={filterUrl}
+                        className="Demos__image"></image>
+                    </svg>
+                  </li>
+                );
+              })
           }
         </ul>
       </div>
@@ -79,6 +80,5 @@ export default Demos;
 Demos.propTypes = {
   list: PropTypes.object
 };
-
 
 

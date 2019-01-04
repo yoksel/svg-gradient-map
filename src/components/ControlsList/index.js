@@ -42,7 +42,7 @@ const ControlsList = ({
         let name = item.name;
 
         let style = {};
-        if(item.colors) {
+        if (item.colors) {
           style.backgroundImage = gradientFromColors(item.colors);
         }
 

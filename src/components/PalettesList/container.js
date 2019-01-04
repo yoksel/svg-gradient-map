@@ -3,7 +3,7 @@ import {addPalette} from '../../store/actions';
 
 import ControlsListTemplate from '../../components/ControlsList';
 
-//------------------------------
+// ------------------------------
 
 const mapStateToProps = (state) => {
   return {
@@ -19,11 +19,11 @@ const mapDispatchProps = (dispatch) => {
   };
 };
 
-const PalettesList
- = connect(
-  mapStateToProps,
-  mapDispatchProps
-)(ControlsListTemplate);
+const PalettesList =
+ connect(
+   mapStateToProps,
+   mapDispatchProps
+ )(ControlsListTemplate);
 
 export default PalettesList
 ;
