@@ -1,9 +1,9 @@
 export const initialState = {
   svgCode: '',
   image: {
-    src: 'https://placekitten.com/800/600',
+    src: './images/nicki-eliza-schinow-356622-unsplash-800.jpg',
     width: 800,
-    height: 600
+    height: 449
   },
   sizeMb: 0,
   type: 'image-and-text'
