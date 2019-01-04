@@ -154,5 +154,32 @@
       "#fffa6d",
       "#f07106"
     ]
+  },
+  {
+    "id": "purple-warm",
+    "name": "Purple warm",
+    "colors": [
+      "#850082",
+      "#f79d63",
+      "#feffe4"
+    ]
+  },
+  {
+    "id": "green-pink-acid",
+    "name": "Green and pink acid",
+    "colors": [
+      "#ff2bb2",
+      "#faffd6",
+      "#19d0aa"
+    ]
+  },
+  {
+    "id": "yellow-blue-acid",
+    "name": "Yellow and blue acid",
+    "colors": [
+      "#0360ff",
+      "#f7ffe4",
+      "#e4ff03"
+    ]
   }
 ]
