@@ -22,12 +22,25 @@ class ImageUploader extends Component {
             reader.readAsDataURL(file);
 
             reader.onloadend = function() {
-              updateImage({
-                src: reader.result,
-                width: img.width,
-                height: img.height,
-                sizeMb
-              })
+              if(img.width === 0) {
+                // Image exists but has zero dimensions
+                setTimeout(() => {
+                  updateImage({
+                    src: reader.result,
+                    width: img.width,
+                    height: img.height,
+                    sizeMb
+                  })
+                }, 50);
+              }
+              else {
+                updateImage({
+                  src: reader.result,
+                  width: img.width,
+                  height: img.height,
+                  sizeMb
+                });
+              }
             }
         }}/>
       </div>
