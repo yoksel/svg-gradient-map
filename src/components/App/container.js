@@ -2,37 +2,65 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 
-import {addPreset, discoveryPrimitive, purgePrimitives} from '../../store/actions';
+import {addPreset, changePrimitiveChildrenProps} from '../../store/actions';
+
+import colorsListToRGBValues from '../../helpers/colorsListToRGBValues';
 
 import AppTemplate from '../../components/App';
 
+let prevPalette = null;
+
 class App extends Component {
-  purgePrev = (prevSection) => {
-    if (!prevSection) {
-      return null;
-    }
-    this.props.purgePrimitives(prevSection);
-  };
+  setPreset = () => {
+    const {
+      primitives,
+      presets,
+      addPreset
+    } = this.props;
 
-  itemFromPath = () => {
-    const {id, section = 'presets', handlerName} = this.props;
-    const currentSet = this.props[section];
-    const handler = this.props[handlerName];
-    let currentItems = [];
-
-    if (!id) {
+    if(primitives.playground.length > 0 || primitives.palette.length === 0) {
       return null;
     }
 
-    currentItems = currentSet && currentSet.filter(item => item.id === id);
+    let presetId = 'gradientMap';
+    let currentItems = presets.filter(item => item.id === presetId);
 
-    if (currentItems) {
-      handler(currentItems);
+    if (currentItems.length > 0) {
+      addPreset(currentItems);
     }
   };
+
+  updateFilter = () => {
+    const {
+      primitives,
+      updateFilterColors
+    } = this.props;
+
+    const {palette} = primitives;
+
+    const paletteStr = palette
+      .filter(item => !item.disabled)
+      .map(item => item.value)
+      .join('');
+
+    if(paletteStr !== prevPalette) {
+      prevPalette = paletteStr;
+      updateFilterColors(primitives.palette);
+
+      if (process.env.NODE_ENV !== 'production') {
+          // Temporary for extracting good palettes
+          console.groupCollapsed('Palette');
+          console.log(palette
+            .filter(item => !item.disabled)
+            .map(item => item.value));
+          console.groupEnd('Palette');
+        }
+    }
+  }
 
   render() {
-    this.itemFromPath();
+    this.setPreset();
+    this.updateFilter();
 
     return (
       <AppTemplate/>
@@ -41,18 +69,12 @@ class App extends Component {
 }
 
 const mapStateToProps = (state, {match}) => {
-  const {presetControls, primitiveControls} = state;
-  let {section, id} = match.params;
-  let handlerName;
-
-  id = 'gradientMap';
-  handlerName = 'addPreset';
+  const {presetControls, primitives} = state;
+  let {section} = match.params;
 
   return {
-    id,
     section,
-    handlerName,
-    docs: primitiveControls,
+    primitives,
     presets: presetControls,
   };
 };
@@ -62,11 +84,30 @@ const mapDispatchProps = (dispatch, props) => {
     addPreset: (presets) => {
       dispatch(addPreset(presets[0]));
     },
-    discoveryPrimitive: (primitives) => {
-      dispatch(discoveryPrimitive({primitives}));
-    },
-    purgePrimitives: (section) => {
-      dispatch(purgePrimitives({section}));
+    updateFilterColors: (colors) => {
+      const colorsFiltered = colors
+        .filter(item => !item.disabled)
+        .map(item => item.value);
+
+      const rgbValues = colorsListToRGBValues(colorsFiltered);
+
+      const propsSet = Object.keys(rgbValues)
+        .reduce((prev, key) => {
+          const id = `func${key.toUpperCase()}`;
+
+          prev[id] = {
+            id,
+            param: 'tableValues',
+            value: rgbValues[key].join(' '),
+          }
+          return prev;
+        }, {});
+
+      dispatch(changePrimitiveChildrenProps({
+        section: 'playground',
+        parentId: 'componentTransfer',
+        propsSet
+      }));
     }
   };
 };
