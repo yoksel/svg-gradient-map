@@ -3,6 +3,8 @@ import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router';
 
+import gradientFromColors from '../../helpers/gradientFromColors';
+
 import './ControlsList.css';
 
 const ControlsList = ({
@@ -41,14 +43,7 @@ const ControlsList = ({
 
         let style = {};
         if(item.colors) {
-          const colorStep = 100 / item.colors.length;
-
-          const colorsWithStops = item.colors
-            .map((color, index) => {
-              return `${color} ${colorStep * (index) + 1}%, ${color} ${colorStep * (index + 1) - 1}%`;
-            });
-
-          style.backgroundImage = `linear-gradient(to right top, ${colorsWithStops.join(',')})`;
+          style.backgroundImage = gradientFromColors(item.colors);
         }
 
         if (control === 'NavLink') {
