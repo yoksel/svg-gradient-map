@@ -51,6 +51,8 @@ const Playground = ({
             xmlnsXlink="http://www.w3.org/1999/xlink"
             className="Playground__svg"
             viewBox={viewBoxValue.join(' ')}
+            width={image.width}
+            height={image.height}
           >
             <defs>
               <Filter/>
