@@ -9,7 +9,7 @@ import RadioList from '../../components/RadioList';
 const typesList = [
   {
     id: 'red',
-    name: 'R',
+    name: 'Red',
     value: `1 0 0 0 0
             1 0 0 0 0
             1 0 0 0 0
@@ -17,7 +17,7 @@ const typesList = [
   },
   {
     id: 'green',
-    name: 'G',
+    name: 'Green',
     value: `0 1 0 0 0
             0 1 0 0 0
             0 1 0 0 0
@@ -25,7 +25,7 @@ const typesList = [
   },
   {
     id: 'blue',
-    name: 'B',
+    name: 'Blue',
     value: `0 0 1 0 0
             0 0 1 0 0
             0 0 1 0 0
