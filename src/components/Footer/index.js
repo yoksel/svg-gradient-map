@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 
 import Wrapper from '../Wrapper';
 
@@ -10,10 +9,6 @@ const Footer = () => {
     <footer className="Footer">
       <Wrapper>
         <div className="Footer__content">
-          <NavLink
-            to="/read"
-            className="Footer__link Footer__link--read"
-          >Reading List</NavLink>
           <a
             href="https://github.com/yoksel/svg-gradient-map/"
             className="Footer__link Footer__link--gh"

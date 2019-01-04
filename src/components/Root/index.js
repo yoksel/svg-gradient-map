@@ -9,14 +9,14 @@ import configureStore from './configureStore';
 const store = configureStore();
 
 const Root = () => {
-  const url = '/:section?/:id?';
+  const url = '/:section?/:id?/';
 
   return (
     <Provider store={store}>
       <Router>
         <Switch>
           <Route
-            path="/read"
+            path="/about"
             component={SinglePage}
           />
           <Route
