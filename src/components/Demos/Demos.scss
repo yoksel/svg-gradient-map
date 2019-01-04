@@ -1,0 +1,67 @@
+@import "../../variables.scss";
+
+.Demos {
+  overflow: hidden;
+}
+
+.Demos__title {
+  margin-bottom: .5em;
+}
+
+.Demos__list {
+  margin: 0 -.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.Demos__item {
+  position: relative;
+  margin-left: .5rem;
+  margin-bottom: .5rem;
+  background: url(nicki-eliza-schinow-356622-unsplash-300.jpg);
+  background-position: 0 0;
+}
+
+.Demos__data {
+  position: absolute;
+  left: .5rem;
+  bottom: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.Demos__data-additions {
+  padding: 0 .4em;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .5);
+  color: white;
+}
+
+.Demos__palette {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-right: .5rem;
+  border: 1px solid;
+  border-radius: 50%;
+  color: $color-darkgray;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, .5) ;
+}
+
+.Demos__svg {
+  display: block;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  image {
+    transition: opacity .15s;
+  }
+
+  .Demos__item:hover & image {
+    opacity: 0;
+  }
+}
