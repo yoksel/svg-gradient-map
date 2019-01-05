@@ -4,8 +4,8 @@ Contains default data:
 
 * `primitivesData` — list of initial primitives
 * `presetsData` — list of initial presets
-* `docsData` — object with docs for primitives
 * `primitivesAttrs` — object with primitives attributes
+* `palettes` — list of palettes for Duotone filter
 
 Usage:
 
@@ -14,5 +14,5 @@ import {
   primitivesData,
   primitivesAttrs,
   presetsData,
-  docsData} from '../Data';
+  palettes} from '../Data';
 ```

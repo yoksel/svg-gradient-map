@@ -1,3 +1,1 @@
-# OpacityControl
-
-## Props
+#BlendModeControl

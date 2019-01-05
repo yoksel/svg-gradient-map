@@ -1,8 +1,7 @@
 # Sidebar
 
-Page sidebar with lists primitives/presets/docs controls
+Page sidebar with palettes controls
 
 Uses:
 
-* [PrimitiveControlsList](#primitivecontrolslist)
-* [PresetsList](#presetslist)
+* [PalettesList](#paletteslist)

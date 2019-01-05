@@ -1,3 +1,3 @@
-# DemosList
+# Demos
 
-## Props
+Component for displaying live demos for list of filters.
