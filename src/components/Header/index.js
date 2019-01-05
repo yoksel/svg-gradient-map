@@ -8,7 +8,6 @@ import './Header.css';
 
 class Header extends Component {
   render() {
-    const {section = 'playground'} = this.props.match.params;
     const pageUrl = this.props.match.url;
     const pageTitle = 'SVG Gradient Map Filter';
     const sectionsList = [

@@ -38,6 +38,10 @@ class App extends Component {
 
     const {palette} = primitives;
 
+    if (palette.length === 0) {
+      return null;
+    }
+
     const paletteStr = palette
       .filter(item => !item.disabled)
       .map(item => item.value)
