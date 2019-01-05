@@ -9,7 +9,8 @@ import './Header.css';
 class Header extends Component {
   render() {
     const {section = 'playground'} = this.props.match.params;
-    const logoLinkProps = {};
+    const pageUrl = this.props.match.url;
+    const pageTitle = 'SVG Gradient Map Filter';
     const sectionsList = [
       {
         id: 'about',
@@ -18,12 +19,6 @@ class Header extends Component {
       }
     ];
 
-    if (section !== 'playground') {
-      logoLinkProps.to = '/';
-    } else {
-      logoLinkProps.to = '';
-    }
-
     const navItems = sectionsList.map(item => {
       const {id, name, url} = item;
       const navItemClassList = [
@@ -31,14 +26,14 @@ class Header extends Component {
         `Header__nav-link-${id}`
       ];
 
-      if (item.id === section) {
+      if (item.url === pageUrl) {
         navItemClassList.push('Header__nav-link--current');
         navItemClassList.push(`Header__nav-link-${id}--current`);
       }
 
       const navItemClass = navItemClassList.join(' ');
 
-      if (item.id === section) {
+      if (item.url === pageUrl) {
         return (
           <span
             key={id}
@@ -60,15 +55,33 @@ class Header extends Component {
       );
     });
 
+    const getLogoLink = () => {
+      const logoLinkProps = {};
+
+      if (pageUrl !== '/') {
+        logoLinkProps.to = '/';
+
+        return (
+          <NavLink
+            className="Header__logo"
+            {...logoLinkProps}
+          >{pageTitle}</NavLink>
+        );
+      }
+
+      return (
+        <span
+          className="Header__logo"
+        >{pageTitle}</span>
+      );
+    };
+
     return (
       <header className="Header">
         <Wrapper>
           <div className="Header__content">
             <h1 className="Header__title">
-              <NavLink
-                className="Header__logo"
-                {...logoLinkProps}
-              >SVG Gradient Map Filter</NavLink>
+              {getLogoLink()}
             </h1>
 
             <nav className="Header__nav">
