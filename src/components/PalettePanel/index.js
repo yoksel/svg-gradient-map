@@ -14,6 +14,7 @@ class PalettePanel extends Component {
       return <PalettePanelControls
         id={props.id}
         index={props.index}
+        itemDisabled={props.disabled}
       />;
     };
 

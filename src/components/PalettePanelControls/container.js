@@ -17,13 +17,13 @@ const mapDispatchProps = (
   params.section = section;
 
   return {
-    removePrimitive: () => {
+    removeItem: () => {
       dispatch(deletePaletteColor(params));
     },
-    duplicatePrimitive: () => {
+    duplicateItem: () => {
       dispatch(duplicatePaletteColor(params));
     },
-    togglePrimitive: () => {
+    toggleItem: () => {
       dispatch(togglePaletteColor(params));
     }
   };

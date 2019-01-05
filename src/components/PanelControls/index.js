@@ -6,11 +6,10 @@ import Icon from '../Icon';
 import './PanelControls.css';
 
 const PanelControls = ({
-  duplicatePrimitive,
-  removePrimitive,
-  togglePrimitive,
-  primitiveDisabled,
-  toggleDocs,
+  duplicateItem,
+  removeItem,
+  toggleItem,
+  itemDisabled,
   hasResult,
   section,
   id,
@@ -36,18 +35,18 @@ const PanelControls = ({
     <div className={panelClassList.join(' ')}>
       <button
         className="PanelControl PanelControl--toggle"
-        onClick={togglePrimitive}
+        onClick={toggleItem}
         type="button"
       >
         <Icon
-          symbol={primitiveDisabled ? 'eye' : 'eye-blocked'}
+          symbol={itemDisabled ? 'eye' : 'eye-blocked'}
           color="currentColor"
           size="16"/>
       </button>
 
       <button
         className="PanelControl PanelControl--add"
-        onClick={duplicatePrimitive}
+        onClick={duplicateItem}
         type="button"
       >
         <Icon
@@ -59,7 +58,7 @@ const PanelControls = ({
       <button
         className="PanelControl PanelControl--remove"
         type="button"
-        onClick={removePrimitive}
+        onClick={removeItem}
       >
         <Icon
           symbol="cross"
@@ -74,11 +73,10 @@ const PanelControls = ({
 export default PanelControls;
 
 PanelControls.propTypes = {
-  duplicatePrimitive: PropTypes.func,
-  removePrimitive: PropTypes.func,
-  togglePrimitive: PropTypes.func,
-  toggleDocs: PropTypes.func,
-  primitiveDisabled: PropTypes.bool,
+  duplicateItem: PropTypes.func,
+  removeItem: PropTypes.func,
+  toggleItem: PropTypes.func,
+  itemDisabled: PropTypes.bool,
   hasResult: PropTypes.bool,
   section: PropTypes.string,
   id: PropTypes.string,
