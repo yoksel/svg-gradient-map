@@ -18,7 +18,7 @@ class Icon extends Component {
 export default Icon;
 
 Icon.propTypes = {
-  symbol: PropTypes.oneOf(['doc', 'eye', 'eye-blocked', 'plus', 'cross']),
+  symbol: PropTypes.oneOf(['doc', 'eye', 'eye-blocked', 'plus', 'cross', 'download']),
   color: PropTypes.string,
   size: PropTypes.string,
 };
