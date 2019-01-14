@@ -1,11 +1,14 @@
 export const initialState = {
   svgCode: '',
   image: {
+    name: 'nicki-eliza-schinow-356622-unsplash-800.jpg',
+    type: 'image/jpeg',
     src: './images/nicki-eliza-schinow-356622-unsplash-800.jpg',
     width: 800,
-    height: 449
+    height: 449,
+    randKey: 0,
+    sizeMb: 0
   },
-  sizeMb: 0,
   type: 'image-and-text'
 };
 

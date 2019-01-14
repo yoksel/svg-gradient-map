@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Filter from '../Filter/container';
 import ImageUploader from '../ImageUploader/container';
+import ImageDownloader from '../ImageDownloader/container';
 
 import './gray-cells.png';
 
@@ -42,8 +43,12 @@ const Playground = ({
   return (
     <section className={'Playground'}>
       <h2 className="visuallyhidden">Live demo</h2>
-      <div className="Playground__image">
+      <div className="Playground__controls">
         <ImageUploader/>
+
+        <ImageDownloader/>
+      </div>
+      <div className="Playground__image">
 
         <div className="Playground__svg-wrapper">
           <svg
