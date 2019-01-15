@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+.ImageDownloader {
+  min-height: 32px;
+  min-width: 165px;
+  margin-left: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ImageDownloader__button {
+  padding: .25em .35em;
+  border-radius: $border-radius;
+  border: 1px solid;
+  color: #000;
+  font: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:active {
+    background: #000;
+    color: #FFF;
+  }
+
+  &--starter {
+    border-style: dashed;
+  }
+}
+
+.ImageDownloader__processing {
+  font-style: italic;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: .25;
+  }
+}
