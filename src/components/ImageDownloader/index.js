@@ -132,7 +132,7 @@ class ImageDownloader extends Component {
       <a
         className="ImageDownloader__button ImageDownloader__button--download"
         style={{display: display}}
-        target="_blank"
+        target="_self"
       >Download</a>
     );
   }
