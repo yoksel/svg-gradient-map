@@ -27,9 +27,11 @@ const SinglePage = () => {
           <main className="SinglePage__inner">
             <h2 className="SinglePage__title">About tool</h2>
 
-            <p>This tool creates SVG Gradient Map Filter from given colors. You can use ready palettes or edit them and get yours. The tool was inspired by the article <a href="https://css-tricks.com/using-svg-to-create-a-duotone-image-effect/">Using SVG to Create a Duotone Effect on Images</a> by Lentie Ward.</p>
+            <p>This tool creates SVG Gradient Map Filter from given colors. You can use ready palettes or edit them and get yours.</p>
 
             <p>Test a filter on your images before adding to a project, the result may differ for different images.</p>
+
+            <p>The tool was inspired by the article <a href="https://css-tricks.com/using-svg-to-create-a-duotone-image-effect/">Using SVG to Create a Duotone Effect on Images</a> by Lentie Ward. You also can read more about effects with <code>feComponentTransfer</code> in article <a href="https://tympanus.net/codrops/2019/02/05/svg-filter-effects-duotone-images-with-fecomponenttransfer/">SVG Filter Effects: Duotone Images with &lt;feComponentTransfer></a> by Sara Soueidan.</p>
 
             <p>Photo: <a href="https://unsplash.com/photos/BjJP2TN8WoI">Nicki Eliza Schinow on Unsplash</a>.</p>
 
